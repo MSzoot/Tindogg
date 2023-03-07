@@ -17,7 +17,7 @@ module.exports = {
         'rex': "url('../Tindogg/images/dog-rex.jpg')",
       },
       backgroundImage: {
-        'teddy': "url('../Tindogg/images/dog-teddy.jpg')",
+        'rex': "url('../Tindogg/images/dog-rex.jpg')",
       },
     fontFamily:{
       tindog: ['poppins','sans-serif']

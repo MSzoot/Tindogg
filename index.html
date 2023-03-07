@@ -10,7 +10,7 @@
   <body class="font-tindog">
     <!-- Main container -->
     <div
-      class="w-[550px] h-[892px] mx-auto my-10 border border-solid border-black"
+      class="w-[550px] h-[892px] mx-auto my-10 border border-solid bg-slate-100 border-black"
     >
       <!-- Nav -->
       <div class="mx-[18px] flex justify-between">
@@ -37,12 +37,34 @@
         </button>
       </div>
       <!-- Dog -->
-      <div
-        id="Dog"
-        class="h-[751px] w-[534px] bg-slate-200 mx-auto rounded-2xl bg-bella"
-      ></div>
+      <div id="Dog">
+        <div
+          style="background-image: url(/images/dog-teddy.jpg)"
+          class="h-[700px] w-[534px] bg-slate-200 mx-auto rounded-2xl bg-cover"
+        >
+          <img
+            class="w-[233px] h-[116px] -rotate-45 translate-y-[54px]"
+            src="/images/badge-like.png"
+            alt="like"
+          />
+          <div class="ml-[20px] pt-[500px] text-white">
+            <h1 class="font-bold text-2xl">Teddy, 30</h1>
+            <p class="mt-1">How you doing ?</p>
+          </div>
+        </div>
+      </div>
       <!-- Buttons -->
-      <div></div>
+      <div class="text-center my-3">
+        <button
+          id="btnLike"
+          class="w-[80px] h-[80px] rounded-full bg-white mr-4"
+        >
+          <img src="/images/icon-heart.png" alt="" class="mx-auto" />
+        </button>
+        <button id="btnNope" class="w-[80px] h-[80px] rounded-full bg-white">
+          <img src="/images/icon-cross.png" alt="" class="mx-auto" />
+        </button>
+      </div>
     </div>
   </body>
   <script src="/index.js" type="module"></script>
