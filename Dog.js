@@ -6,7 +6,7 @@ class Dog {
     }
 
     reaction(){
-        const decision =  this.hasBeenLiked == true ? "like" : "nope"
+        const decision =  this.hasBeenLiked == true ? "like" : "nope";
         this.status = `<img
         class="w-[233px] h-[116px] -rotate-45 -translate-y-[606px]"
         src="/images/badge-${decision}.png"
