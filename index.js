@@ -24,10 +24,9 @@ const getNextDog = () => {
 
 const setStatus = (likeOrnope) => {
     if (likeOrnope == "like"){
-        currentDoggo.reactionLike()
-    }else if(likeOrnope == "nope"){
-        currentDoggo.reactionNope()
+        currentDoggo.hasBeenLiked = true;
     }
+    currentDoggo.reaction()
     render()
 }
 

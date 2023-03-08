@@ -5,21 +5,15 @@ class Dog {
         this.status = ''
     }
 
-    reactionLike(){
+    reaction(){
+        const decision =  this.hasBeenLiked == true ? "like" : "nope"
         this.status = `<img
         class="w-[233px] h-[116px] -rotate-45 -translate-y-[606px]"
-        src="/images/badge-like.png"
+        src="/images/badge-${decision}.png"
         alt="like"
       />`
     }
 
-    reactionNope(){
-        this.status = `<img
-        class="w-[233px] h-[116px] -rotate-45 -translate-y-[606px]"
-        src="/images/badge-nope.png"
-        alt="like"
-      />`
-    }
     
     getHtml(){
         return `<div
