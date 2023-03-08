@@ -11,8 +11,12 @@ document.getElementById("doghtml").innerHTML = currentDoggo.getHtml()
 
 
 const getNextDog = () => {
-    if(index != 2){
+    if(index < 2){
         index++;
+        currentDoggo =  new Dog(dogs[index])
+        render();
+    }else if (index = 2){
+        index = 0 ;
         currentDoggo =  new Dog(dogs[index])
         render();
     }
