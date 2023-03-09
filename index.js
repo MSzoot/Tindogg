@@ -2,6 +2,7 @@ import {dogs}  from "/data.js"
 import { Dog } from "./Dog.js"
 
 let index = 0 ;
+let waiting = false;
 let currentDoggo =  new Dog(dogs[index])
 
 
@@ -20,6 +21,7 @@ const getNextDog = () => {
         currentDoggo =  new Dog(dogs[index])
         render();
     }
+    waiting = false
 }
 
 const setStatus = (likeOrnope) => {
@@ -28,17 +30,22 @@ const setStatus = (likeOrnope) => {
     }
     currentDoggo.reaction()
     render()
+    waiting = true
 }
 
 
 
 const likeClicked = () => {
+    if(!waiting){
     setStatus("like")
-    setTimeout( getNextDog ,500)
+    setTimeout( getNextDog ,1000)
+    }
 }
 const nopeClicked = () => {
+    if(!waiting){
     setStatus("nope")
-    setTimeout( getNextDog ,500) 
+    setTimeout( getNextDog ,1000) 
+    }
 }
 
 document.getElementById("btnLike").addEventListener("click",likeClicked)
