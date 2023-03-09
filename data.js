@@ -24,3 +24,5 @@ export const dogs = [
     }
 ]
  
+
+//  Array of dogs objects 

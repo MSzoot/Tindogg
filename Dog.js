@@ -1,10 +1,14 @@
 
+// dog class, construct object baset od "data" 
+
+
 class Dog {
     constructor(data){
         Object.assign(this,data)
         this.status = ''
     }
 
+      // reaction method  - sets this.status to html of label "like or nope" , loaded image depends on hasbeenlike variable
     reaction(){
         const decision =  this.hasBeenLiked == true ? "like" : "nope";
         this.status = `<img
@@ -14,7 +18,7 @@ class Dog {
       />`
     }
 
-    
+    // gethtml method - generates html for dog section based on data from object 
     getHtml(){
         return `<div
         style="background-image: url(${this.avatar})"
